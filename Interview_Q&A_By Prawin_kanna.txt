@@ -1,0 +1,287 @@
+1.Difference between the worker and driver?
+A. The driver is basically a process where the main method runs. It converts the user program into tasks and just after that it schedules the tasks on the executors. Workers(slaves) are running spark instance where executors live to execute tasks. They are the compute nodes in Spark.
+  An executor is dedicated to a specific spark application and terminated when the application completes. A spark program normally consists of many executors, often working in parallel. Typically, a worker node-which hosts the executor process- has finite or fixed number of executors allocated at any point in time.
+
+
+2.What is cluster scope init script in pyspark?
+A. An init script is a shell script that runs during startup of each cluster node before the apachee spark driver or worker JVM starts. We use the init scripts for various purposes such as installing custom libraries, launching bachground processed, or applying enterprise security policies.
+
+
+3.Hadoop Architecture?
+A. Hadoop is an open source frameworks from Apache and is used to store process and analyze data which are very huge in volume. It is used to batch/offline processing. It is being used by Facebook, Yahoo, Google, Twitter, LinkedIn and manymore. More over it can be scaled up just by adding nodes in the cluster.
+Important modules of Hadoop are 
+	1.HDFS: Hadoop Distributed File System
+	2.Yarn: Yet another resource Negotiator
+	3.Map Reduce:parallel computation on data using key value pair.
+	4.Hadoop common
+
+Architecture:
+
+Hadoop Architecture is a package of the file system, MapReduce engine and HDFS. A hadoop cluster consists of a single master and multiple slave nodes. The master node includes job Tracker, Task Tracker, NameNode, and DataNode whereas the slave nodes includes DataNode and TaskTraker.
+
+
+https://www.javatpoint.com/what-is-hadoop
+
+
+4.Explain storage accounts?
+A. Azure Blob storage is a service for storing large amount of unstructured object data, such as text or binary data. You can use Blob storage to expose data pubicly to the world, or to store application data privatley. 
+
+Commom uses of Blob storage include:
+
+>Serving images or documents directly to a browser
+>Storing files for distributed access
+>Streaming video and audio
+>Storing data for backup and restore, disaster recovery, and archiving
+>Storing data for analysis by an on-premises or azure-hosted service
+
+
+5.Adv of PySpark?
+A. 
+Adv of Pyspark?
+======
+>Simple to write
+>Framework handles errors
+>Algorithms
+>Libraries
+>Good Local tools
+>Learning curve
+>Ease of use
+
+DisAdv of PySpark:
+====
+>Difficult ot express
+>Less Efficient
+>Slow
+>Immature
+>Cannot use internal functioning of spark
+
+
+Characteristics of Pyspark
+====
+>Nodes are abstracted
+>Network is abstracted
+>Based on Map-Reduce
+>API for spark
+
+
+6.What is Parallel computation and Inmemory computation?
+A. 
+Parallel compututing:
+====
+It is the use of multiple processing elements simultaneously for solving any problem. Problems are broken down into instructions and are sloved concurrently as each resouce that has been applied to work working at the same time.
+
+ADV of Parallel computing:
+===
+>It saves time and money as many resource working together will reduce the time and cut potential costs.
+>It can be impractical to solve larger problems on Serial Computing. 
+>It can take advantage of non-local resources when the local resources are finite. 
+
+Limitations of Parallel computing:
+=======
+>It addresses such as communication and synchronization between multiple sub-tasks and processes which is difficult to achieve.
+>The algorithms must be managed in such a way that they can be handled in a parallel mechanism.
+
+
+Inmemory Computation:
+====
+In-memory computation is the technique of running computer calculations entirely in computer memory. This term typically implies large-scale, complex calculations which required specilized system software to run the calculations on computers working together in a cluster. As a cluster, the computers pool together their RAM so the calculation is essentially run across computers and leverages the collective RAM space of all the computer together
+
+
+
+7.What is PySpark?
+A. PySpark is an interface for apache spark in python. an open source, distributed computing framework and set of libraries for real-time, large-scale data processing. If you're already familiar with Python and libraries such as Pandas, then PySpark is a good language to create more scalable analyses and pipelines. It not only allows you to write spark applications using python APIs, but also provides the PySpark shell for interactivley analyzing your data in distributed environment.
+
+8.What is Apache Spark?
+A. Apache Spark is a powerfull open-source processing engine built around speed, ease of use, and sophisticated analytics, with APIs in java, scala, python, R, sql. Spark runs programs in upto 100X faster than Hadoop MapReduce in memory, or 10X faster on disk.
+
+
+Apache Spark is an open-source, distributed processing system used for big data workloads. It utilizes in-memory caching, and optimized query execution for fast analytic queries against data of any size
+
+Apache spark is more accessible, powerful, and powerful data tool to deal with a varity of big data challenges. Apache Spark is an actively developed and unified computing engine and a set of libraries. It is used for parallel data processing on computer clusters
+
+9.Explain apachee Spark Architecture?
+A. Apache spark is more accessible, powerful, and powerful data tool to deal with a varity of big data challenges. Apache Spark is an actively developed and unified computing engine and a set of libraries. It is used for parallel data processing on computer clusters
+
+Architecture:
+The Apache Spark framework usees a master-slave architecture that consists of driver, which runs as a master node, and many executors that run across as worker nodes in the cluster. Apache spark can be used for batch processing and real-time processing as well.
+
+Driver program in the apache spark architecture calls the main program of an application and creates SparkContext. A SparkContext consist of all the basic funtionalities. Spark Driver contains various other components such as DAG scheduler, Task Scheduler, Backend Scheduler, and Block Manager, which are responsible for translating the user-written code into jobs that are actually executed on the cluster.
+
+Spark Architecture applications:
+
+The spark Driver:
+===
+The spark driver is kind of like the driver seat of a spark application. It acts as the controller of the execution of spark Application. The spark driver maintains all the states of the application running on the spark cluster. 
+
+The Spark Executors:
+===
+The tasks assigned by the Spark driver are performed by the Spark executors. The core responsibility of a Spark executor is to take the assigned tasks, run them, and report back their success or failure state and results. Each Spark application has its own separate executor processes.
+
+
+The Cluster Manager:
+===
+The cluster manager maintains a cluster of machines that will run Spark applications. It has its own driver called the “master” and “worker” abstractions.
+
+When the time comes to run a Spark application, the resources are requested from the cluster manager to run it. Depending on the configuration of the application, it can be somewhere to run the Spark driver or simply resources for the executors for the Spark application. 
+
+
+10.What is Hive?
+A. Hive allows users to read, write, and manage petabytes of data using SQL. Hive is built on top of Apache Hadoop, which is an open-source framework used to efficiently store and process large datasets. As a result, Hive is closely integrated with Hadoop, and is designed to work quickly on petabytes of data.
+
+
+11.What is HDFS?
+A. HDFS is a distributed file system that handles large data sets running on commodity hardware. It is used to scale a single Apache Hadoop cluster to hundreds (and even thousands) of nodes. HDFS is one of the major components of Apache Hadoop
+
+HDFS exposes a file system namespace and allows user data to be stored in files. Internally, a file is split into one or more blocks and these blocks are stored in a set of DataNodes. Hadoop HDFS has the features like Fault Tolerance, Replication, Reliability, High Availability, Distributed Storage, Scalability etc.
+
+
+12.How to connect Hdfs from apache spark?
+A. 
+
+
+
+
+
+
+13.What is ETL?
+A. In the world of data warehousing, if you need to bring data from mutliple diffeent data sources into one, centralized database we use ETL. ETL stands for Extract Transfer Load.
+
+>Extract data from its original Source
+>Transfer data by duplicating it, sombining it, and esuring quality, to then
+>Load data into the target database.
+
+
+14. What is DataFrame?
+A. A DataFrame is a data structure that organizes data into a 2-dimensional table of rows and columns, much like a spreadsheet. DataFrames are one of the most common data structures used in modern data analytics because they are a flexible and intuitive way of storing and working with data.
+
+A Spark DataFrame is an integrated data structure with an easy-to-use API for simplifying distributed big data processing
+
+15.Explain how to create UAF in Pyspark?
+A. PySpark UDF is a User Defined Function that is used to create a reusable function in Spark. Once UDF created, that can be re-used on multiple DataFrames and SQL (after registering). The default type of the udf() is StringType. 
+
+creating UDF:
+
+Before creating UDF we need to create a DataFrame in pyspark
+
+
+Add some more data from gopi this is not enough
+
+
+
+
+
+
+16.What is RDD?
+A. Resilient Distributed Datasets (RDD) is a fundamental data structure of Spark. It is an immutable distributed collection of objects. Each dataset in RDD is divided into logical partitions, which may be computed on different nodes of the cluster.
+
+The main abstraction Spark provides is a resilient distributed dataset (RDD), which is a collection of elements partitioned across the nodes of the cluster that can be operated on in parallel.
+
+17.Explain basic errors in pyspark?
+A. 
+>Resolved attribute(s) your_field#xx missing from …..
+>An error occurred while calling o64.cacheTable. or An error occurred while calling o206.showString
+>lib.your_module not found when using udfs
+>Cannot have map type columns in DataFrame which calls set operations
+>IOPub data rate exceeded
+
+18.how to initiate spark session in pyspark?
+A. SparkSession is the entry point to Spark SQL. It is one of the very first objects you create while developing a Spark SQL application. As a Spark developer. you create a SparkSession using the SparkSession. builder method (that gives you access to Builder API that you use to configure the session).
+
+builder:
+===
+A class attribute having a Builder to construct SparkSession instances
+
+Syntax:
+===
+spark = SparkSession.builder \
+    .master("local") \
+    .appName("Word Count") \
+    .config("spark.some.config.option", "some-value") \
+    .getOrCreate()
+
+
+19.Explain pyspark time complexity in pyspark?
+A. In computer science, the time complexity is the computational complexity that describes the amount of computer time it takes to run an algorithm. 
+
+
+
+20. What is PySpark storage level?
+A. StorageLevel decides how RDD should be stored. In Apache Spark, StorageLevel decides whether RDD should be stored in the memory or should it be stored over the disk, or both. It also decides whether to serialize RDD and whether to replicate RDD partitions.
+
+
+21.Explain sparkconf?
+A. Spark properties control most application parameters and can be set by using a SparkConf object, or through Java system properties. Environment variables can be used to set per-machine settings, such as the IP address, through the conf/spark-env.sh script on each node.
+
+Configuration for a Spark application. Used to set various Spark parameters as key-value pairs. Most of the time, you would create a SparkConf object with SparkConf() , which will load values from spark.
+
+
+22.ADV and DisAdv and characterstics of PySpark?
+A. 
+Adv of Pyspark?
+======
+>Simple to write
+>Framework handles errors
+>Algorithms
+>Libraries
+>Good Local tools
+>Learning curve
+>Ease of use
+
+DisAdv of PySpark:
+====
+>Difficult ot express
+>Less Efficient
+>Slow
+>Immature
+>Cannot use internal functioning of spark
+
+
+Characteristics of Pyspark
+====
+>Nodes are abstracted
+>Network is abstracted
+>Based on Map-Reduce
+>API for spark
+
+
+
+23.data types and partition in PySpark?
+A. PySpark partition is a way to split a large dataset into smaller datasets based on one or more partition keys. When you create a DataFrame from a file/table, based on certain parameters PySpark creates the DataFrame with a certain number of partitions in memory. This is one of the main advantages of PySpark DataFrame over Pandas DataFrame.
+
+PySpark supports partition in two ways; partition in memory (DataFrame) and partition on the disk (File system).
+
+Partition in memory: You can partition or repartition the DataFrame by calling repartition() or coalesce() transformations.
+
+Partition on disk: While writing the PySpark DataFrame back to disk, you can choose how to partition the data based on columns using partitionBy() of pyspark.sql.DataFrameWriter.
+
+ADV of partition:
+>Fast accessed to the data
+>Provides the ability to perform an operation on a smaller dataset
+
+
+24.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

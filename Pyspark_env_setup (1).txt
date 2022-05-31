@@ -1,0 +1,55 @@
+1. Download & Install Anaconda. 
+
+   Go to https://anaconda.com/ and select Anaconda Individual Edition.
+
+2. Open Conda command Prompt and Create new new virtual environment then activate it.
+   
+   Create environment : conda create -n env_name python=3.8.2 anaconda
+   Activate environment : conda activate env_name
+
+3. Intall java in both jdk file and conda environment.
+   
+   JDL file.
+   Go to https://www.oracle.com/java/technologies/downloads/ and download jdk file to install it.
+   
+   In Conda environment. by using below command.
+   conda install openjdk
+
+4. Install PySpark.
+
+   In Conda environment. by using below command.
+   conda install pyspark
+
+5. Install required package.
+   
+   In Conda environment. by using below command.
+   conda install -c conda-forge findspark.
+   pip install jupyterlab.
+
+6. Open jypyter Notebook and check PySpark.
+   
+   In Conda environment. by using below command.
+   jupyter notebook
+   
+   a. create new python jupyter notebook.
+   
+   In jupyter notebook below code.
+
+   import pyspark
+   from pyspark.sql import SparkSession
+   from pyspark.sql.types import StructType,StructField, StringType, IntegerType 
+   from pyspark.sql.types import ArrayType, DoubleType, BooleanType
+   from pyspark.sql.functions import col,array_contains
+
+   spark = SparkSession.builder.appName('SparkByExamples.com').getOrCreate()
+
+   df = spark.read.csv("csv file path")
+
+   df.show()
+
+
+   
+   
+   
+   
+   

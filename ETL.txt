@@ -1,0 +1,157 @@
+ETL (Extract, Transform, Load)
+
+ETL, which stands for extract, transform and load, is a data integration process that combines data from multiple data sources into a single, consistent data store that is loaded into a data warehouse or other target system.
+
+
+>ETL cleanses and organizes data in a way which addresses specific business intelligence needs.  
+
+ETL is often used by an organization to: 
+
+>>Extract data from legacy systems
+>>Cleanse the data to improve data quality and establish consistency
+>>Load data into a target database.
+
+ETL vs ELT:
+==========
+ELT copies or exports the data from the source locations, but instead of loading it to a staging area for transformation, it loads the raw data directly to the target data store to be transformed as needed.
+
+
+
+How ETL works:
+==============
+The easiest way to understand how ETL works is to understand what happens in each step of the process.
+
+Extract:
+=======
+During data extraction, raw data is copied or exported from source locations to a staging area. Data management teams can extract data from a variety of data sources, which can be structured or unstructured. 
+
+Those sources include but are not limited to:
+
+SQL or NoSQL servers
+CRM and ERP systems
+Flat files
+Email
+Web pages
+
+
+
+Transform
+=========
+In the staging area, the raw data undergoes data processing. Here, the data is transformed and consolidated for its intended analytical use case. 
+
+This phase can involve the following tasks:
+
+>Filtering, cleansing, de-duplicating, validating, and authenticating the data.
+>Performing calculations, translations, or summarizations based on the raw data. This can  include changing row and column headers for consistency, converting currencies or other units of measurement, editing text strings, and more.
+>Conducting audits to ensure data quality and compliance
+>Removing, encrypting, or protecting data governed by industry or governmental regulators
+>Formatting the data into tables or joined tables to match the schema of the target data warehouse.
+
+
+Load:
+====
+In this last step, the transformed data is moved from the staging area into a target data warehouse. Typically, this involves an initial loading of all data, followed by periodic loading of incremental data changes and, less often, full refreshes to erase and replace data in the warehouse. For most organizations that use ETL, the process is automated, well-defined, continuous and batch-driven. Typically, ETL takes place during off-hours when traffic on the source systems and the data warehouse is at its lowest.
+
+
+
+Why Do You Need an ETL tool?
+
+1. Time-Efficiency:
+An ETL tool allows you to collect, transform, and consolidate data in an automated way. As a result, you can save plenty of time and effort otherwise spent on importing data manually.
+
+2. Handle Complex Data Easily:
+With time, your business will have to work with a vast amount of complex and diverse data. For instance, you can be a multi-national organization with data from 3 different countries with distinct product names, customer IDs, addresses, etc.
+
+If you have to manage a range of attributes, you may end up formatting data all day long. An ETL tool streamlines the tedious data cleansing tasks for you.
+
+3. Reduced Error Probability:
+Even if you are careful with your data, you are prone to errors when handling it manually. A slight mistake in the early stages of the data processing can be dicey. Why? Because one error leads to another mistake, and the cycle continues. For example, if you enter sales data incorrectly, your entire calculations can go wrong.
+
+ETL tools automate several parts of a data process, reducing manual intervention and lowering error probability.
+
+4. Improved Business Intelligence And ROI:
+An ETL tool helps ensure data governance. As a result, you can use this high-quality data to make better decisions and increase your ROI.
+
+
+Types of ETL Tools:
+==================
+ETL tools types:
+
+1.Batch ETL Tools:
+================
+In this type of ETL tool, batch processing is used to acquire data from the source systems. The data is extracted, transformed, and loaded into the repository in batches of ETL jobs.
+
+It’s a cost-effective method because it uses limited resources in a time-bound way.
+
+2.Real-Time ETL Tools:
+====================
+Data is extracted, cleansed, enriched, and loaded to the target system in real-time ETL tools. These tools offer you faster access to information and improve time to insights.
+
+As the need to gather and analyze the data in the shortest possible time has augmented, these ETL tools are becoming more popular among businesses.
+
+3.On-Premise ETL Tools:
+=====================
+Many companies operate legacy systems that have both the data and the repository configured on-premise. The main reason behind such an implementation is data security. That’s why companies prefer having an ETL tool deployed on-site.
+
+4.Cloud ETL Tools:
+================
+As the name suggests, these tools are deployed on the cloud as various cloud-based applications form an essential part of enterprise architecture. Companies opt for cloud ETL tools to manage data transfer from these applications. Cloud-based ETL tools let businesses leverage flexibility and agility in the ETL process.
+
+
+Use-Cases of ETL Tools:
+=====================
+These are the three most common use-cases of ETL software in the enterprise sector, explaining when to use ETL:
+
+Data Warehouse:
+==============
+Data Warehouse is an organized environment that holds critical business data. But before data is loaded into the data warehouse, it has to be cleansed, enriched, and transformed. Once loaded, this data becomes a ‘single source of truth’ for the business.
+
+One of the main steps in building a data warehouse is ensuring that the data retains quality and accuracy. An ETL tool in an on-premise or cloud data warehouse can reinforce this concept and simplify the execution of this use-case effortlessly, allowing reliable data loading.
+
+
+Data Migration:
+==============
+Another important use-case of an ETL tool is upgrading systems or moving data from a legacy system to a modern one.
+
+The challenge with data migration is mainly the disparity in the format of the old and new systems. An ETL tool, with its enhanced transformation capabilities, ensures the format, structure, and scheme of the source data is compatible with the target system.
+
+
+ELT or Pushdown Optimization:
+============================
+In an ETL process, transformation occurs in the staging area before data is loaded into the destination system.
+
+On the other hand, in an ELT process, data is fetched, entered into the database, and transformations are performed in the database. This process is preferred for high-volume datasets. It reduces strain on the tool’s server because all the processing is taking place in the database.
+
+
+What to Look for When Choosing an ETL Tool?
+==========================================
+>Connectivity
+>Easy-to-Use Interface
+>Scalability
+>Error-Handling
+>Real-time Data Access
+>Build-In Monitoring
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

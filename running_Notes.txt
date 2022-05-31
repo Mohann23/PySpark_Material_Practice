@@ -1,0 +1,62 @@
+20:15 30-05-2022
+
+
+create azure account
+create resource 
+create data bricks
+create azure date factory 
+
+
+
+
+
+
+go to date factory for creating etl
+
+using that we can use pipelines and preform actions on that, and we can also connect the databases and other things to the pipeline and get the data from that 
+
+
+
+
+
+1.
+resource
+data bricks
+data factory
+
+
+creating a database
+====
+seacrh for sql data base
+and create a data base ans keep the resource group same as data factory 
+
+ 
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
