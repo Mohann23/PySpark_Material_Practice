@@ -33,6 +33,11 @@ and create a data base ans keep the resource group same as data factory
  
 
 
+17:16 31-05-2022
+
+instead of changing the \ to / add the r in before coats
+
+
 
 
 
@@ -43,7 +48,7 @@ and create a data base ans keep the resource group same as data factory
 
 
 
-
+                        
 
 
 
