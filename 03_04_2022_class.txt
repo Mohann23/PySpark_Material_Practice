@@ -1,0 +1,81 @@
+from google.colab import drive
+drive.mount('/content/drive')
+
+!apt-get install openjdk-8-jdk-headless -qq > /dev/null
+
+
+!wget -q https://dlcdn.apache.org/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz
+
+
+
+!tar xf spark-3.2.1-bin-hadoop3.2.tgz
+
+!pip install -q findspark
+
+import os
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
+os.environ["SPARK_HOME"] = "/content/spark-3.2.1-bin-hadoop3.2"
+
+import findspark
+findspark.init()
+
+findspark.find()
+
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder\
+        .master("local")\
+        .appName("Colab")\
+        .config('spark.ui.port', '4050')\
+        .getOrCreate()
+
+spark
+
+#/content/drive/MyDrive/pyspark/1000 BT Records.csv
+
+df = spark.read.csv(r"/content/drive/MyDrive/pyspark/1000 BT Records.csv", header=True, inferSchema=True)
+
+df.show()
+
+from pyspark.sql.functions import *
+from pyspark.sql.types import *
+
+def upper_case(str1):
+    """
+    Functions helps to converts given string in UPPER case
+    """
+    return str1.upper()
+
+upper_case_UDF = udf(lambda i : (upper_case(i)))
+
+df.select(df.Date,upper_case_UDF(col("Description")).alias('Description_temp')).show()
+
+def zero_func(x):
+  """
+  Function helps to find zero values.
+  """
+  try:
+    int_x = int(x)
+    print(int_x)
+    if int_x == 0:
+      return 'ERROR'
+    return x
+  except ValueError:
+    if x == '00.00':
+      return "Error"
+    return x
+
+
+
+print(zero_func('00.00'))
+
+zero_UDF = udf(lambda x : zero_func(x))
+
+s_df = df.select(df.Date,col("Balance"),zero_UDF(col("Balance")).alias('Balance_validation'))
+
+s_df.show()
+
+s_df.filter(col('Balance_validation')== 'Error').show()
+
+s_df.filter(~(col('Balance_validation')== 'Error')).show()
+

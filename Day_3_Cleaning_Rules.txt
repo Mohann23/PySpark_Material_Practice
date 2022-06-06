@@ -1,0 +1,5 @@
+cleansing reult
+1.) NoNull - there sholud be no nulls in this entire sheet, check each and every column.
+2.) DateError - date should be proper format (dd-mm-yyyy).
+3.) ProperEmail - validate email with proper email id format.
+4.) DuplicateData - Extact Duplicates are not allowed.
