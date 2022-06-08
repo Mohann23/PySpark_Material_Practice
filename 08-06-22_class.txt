@@ -1,0 +1,81 @@
+list1  = list(range(1,50))
+
+rdd = spark.sparkContext.parallelize(list1)
+
+rdd2 = rdd.map(lambda x : (x*x))
+
+print(rdd2.getNumPartitions())
+
+rdd3 = rdd2.repartition(2)
+
+print(rdd3.getNumPartitions())
+
+var1 = SparkContext.broadcast([1,2,3])
+
+df2 = df.withColumn('year',date_handler(col('date')))
+
+df2.show()
+
+# i = 10
+
+# if i == 10:
+#   pass
+# elif i == 20:
+#   pass
+# else:
+#   pass
+
+# case when i == 10 then pass end
+
+df.show()
+
+from datetime import datetime
+
+def try_parsing_date(text):
+    for fmt in ('%Y-%m-%d', '%d.%m.%Y', '%d/%m/%Y','%d-%m-%Y','%dd-%mm-%yyyy'):
+        try:
+            date_object = datetime.strptime(text, fmt)
+            converted_date_object = date_object.strftime('%Y')
+            return converted_date_object
+
+        except ValueError:
+            pass
+    return 'ERROR_DATE'
+
+def try_parsing_date_m(text):
+    for fmt in ('%Y-%m-%d', '%d.%m.%Y', '%d/%m/%Y','%d-%m-%Y','%dd-%mm-%yyyy'):
+        try:
+            date_object = datetime.strptime(text, fmt)
+            converted_date_object = date_object.strftime('%m')
+            return converted_date_object
+
+        except ValueError:
+            pass
+    return 'ERROR_DATE'
+
+year_handler = udf(lambda x : try_parsing_date(x))
+month_handler = udf(lambda x : try_parsing_date_m(x))
+
+df = df.withColumn('year',year_handler(col('date')))
+df = df.withColumn('month',month_handler(col('date')))
+
+df = df.withColumn('activity',lit(1))
+
+df.show()
+
+d_df = df.groupBy('year').agg(sum('amount').alias('sum'),min('amount'),count('activity'))
+
+d_df.show()
+
+#1983
+
+d_df = d_df.withColumn('year',when(col('year') == "ERROR_DATE",'1983').otherwise(col('year')))
+
+d_df.show()
+
+#read csv,read parquet and read json
+
+#write csv,write parquet and write json
+
+
+
