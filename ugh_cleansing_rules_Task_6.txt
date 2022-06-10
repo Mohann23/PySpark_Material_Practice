@@ -1,0 +1,13 @@
+1. get below dtails from:
+
+current_week	previous_week	current_month	previous_month	current_year	previous_year	last_login
+
+data from user_login_history.
+
+2. check all kind of errors.
+
+3. date should not be greater than today.
+
+4. always based today date every metrix should calculate.
+
+
