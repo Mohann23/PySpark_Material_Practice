@@ -259,15 +259,8 @@ ADV of partition:
 >Provides the ability to perform an operation on a smaller dataset
 
 
-24.
-
-
-
-
-
-
-
-
+24.Pyspark inbuild function?
+A. 
 
 
 
