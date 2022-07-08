@@ -1,0 +1,4 @@
+s.no,supplier_id,supplier_name,region
+1,1001,test1,asia
+2,1002,test2,asia
+3,1003,test2,europe

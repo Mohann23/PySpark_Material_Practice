@@ -1,0 +1,152 @@
+First go throigh the Tutorialpoint:
+https://www.tutorialspoint.com/hadoop/hadoop_interview_questions.htm
+
+Hadoop:(written is Java)
+------
+Open source frame work for storing and processing the big data, we can use java, python.
+
+Bigdata:
+-------
+Huge volume of data which are generated in very high speed, and volume is very high, we could not process this bigdata with normal techniques, so we are using Hadoop, Hadoop is based on GFS(google file system), and hadoop had MapReduces , HDFS.
+
+types of data:
+-------------
+	Structured -  RDBMS -- rows and columns.
+	Unstructrued - Images.
+	semi-structured - XML, json.
+	
+Sources of big data:
+-------------------
+	social media
+	stock exchanges
+	powergrid data
+	transport data
+	search engine data
+
+5-v's of bigdata:
+----------------
+	volume*
+	velocity*
+	varity
+	value*
+	veracity
+	
+The main challenges in big data are:
+-----------------------------------
+	*transfer
+	*Analysis
+	*Processing
+	*Storage
+
+
+
+Hadoop Architecture:
+-------------------
+Open source frame work for storing and processing the Larger datasets using cluster computing. 
+The hadoop framework provides two main things:
+	*Cluster computing
+	*Storage
+
+Mainly two layes:
+----------------
+	1.Processing layer(MapReduce)
+	2.Storage layer (HDFS)
+	
+MapReduce:(Processing)
+-----------------------
+	*Distributed application developed by google, for processing large amount of data.
+	*It works on Cluster commodity system(Set of computer that works Parallelly so that the result can viewed in a single system)
+
+HDFS:(Hadoop Distrubuted File System):
+--------------------------------------
+	*It is based on Google file system(GFS).
+	*It provides distrubuted file system that runs on the commodity system (GFS).
+	*Main diff is highly fault-tolerant.
+
+Apart from these two MapReduce and HDFS, we have Yarn and Hadoop Common
+	
+Yarn:(Yet Another Resource Negotiator)
+--------------------------------------
+	*It manages the Cluster Management and Job secheduling.
+
+Hadoop Common:
+--------------
+	*It is a Java library, and utility for hadoop modules
+
+
+How Hadooop works?
+-----------------
+>> Hadoop mainly works on the linux.
+=>Hadoop runs on the cluster computer, 
+	>Data is initially divided into directory(folder) of files.
+	>Files are divided into blocks size of 128mb and 64mb.
+	>The files are then distributed across the clusters for further processing.
+	>Blocks are replicated for handling failure.
+	>Proforming the sort that takes place between the map and resources stages.
+	>Sending the sorted data to the certain computer Commodies.
+
+
+HDFS overview:
+-------------
+	*HDFS is distrubuted file system and it runs on the commodity hardware and it is highly fault-tolerant
+	*I case of normal distributed file system failure rate is high and may occure, HDFS is fault-tolerant, we can design using low cost hardware
+
+Features:
+--------
+	*It is suitable for distributed storage and processing.
+	*it provides file permission and authentication.
+	*Highly Fault-tolerant
+	
+HDFS architecture is mainly contains two nodes:
+-------
+	Name node - It manages the file system (master)
+	Data Node - It performs the read and write operation as per the client request (slave)
+
+HDFS operations:
+-----
+	*Starting - 1.(namenode -format) 2.Start -dfs(Distrubuted file system).sh(sh-shell command)
+	*listing - listing the files in the HDFS
+	*Insert -  Insert the data into the HDFS
+	*retrive - retriving the data from the HDFS
+	*shutdown - shudown the HDFS - stop -dfs.sh
+
+
+
+MapReduce overview:
+-----------------
+	*It is a frame work which we can use to process the huge amount of data in a parallel on the large cluster of commodity hardware in a releable manner. It executes in 3 stages, Map, shuffle, reduce
+	
+Main Stages in MapReduce:
+-----------------
+	*Map stage - It is input stage, for processing data. Input file is passed to mapper funtion line by line. The mapper funtion creates the smaller chunks of data.
+	*Reduce stage - It is combination of shuffle stage and reduce stage. the reducer stage job is to process the data from the mapper function.
+	*After processing it produce a new set of output, and stored in HDFS.
+
+
+*****Terminology of Hadoop:
+-------
+1.Payload
+2.Mapper
+3.Namenode
+4.dataNode
+5.Masternode
+6.Slave node
+7.Job tracker
+8.task tracker
+9.Job 
+10.Task
+11.Task attempt
+	
+
+Single Node and Multi Node:
+--------------------------
+--Single node start quick but processing is slow
+--Multi node start late but processing is fast
+
+
+	
+
+
+
+
+

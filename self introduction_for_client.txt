@@ -1,0 +1,47 @@
+self Introduction:
+------------------
+I am Having around  3.2 years of experience in python and pyspark
+Experitize in Analyzing the sql scripts using PySpark SQL for faster performance
+I have good understanding of git, bit bucket, jira 
+I have hands-on experience with operating systems like windows
+Implemented unit tests for the code in test driven development using Agile, Scrum methodologies
+
+Coming to my previous project it is related to Trims(Trade record Information management system), Here we get the trade data of the user and we do column mapping, cleansing and processing as per the requirements. 
+
+Coming to Languages and tools we used in this project are, Python, Pyspark, MySQL, Bitbucket, Jira.
+Here we followed Agile and Scrum Methodologies
+
+Roles and responsibilties:
+=========================
+> understanding the project requirements and developing the code  based on the client requirements using python ,Pyspark.
+> I am Involved in wrinting the code in PySpark and Python as part of data cleaning and processing.
+> Have Implemented agile and scrum methodology with two week sprint  implementation in test driven development
+> We are in to Analysis, design and implementation of business requirements using PySpark & Python	
+> Involved in writing Spark SQL scripts for data processing as per business requirements
+> Here we followed 2 week sprint.
+
+
+Old(first) Project:
+==================
+Monitoring operations and Automation on Cloud environment. the project is related to few inbuild tools,
+
+Here we get the data of the people who used which tool for how much time and according to that we need to, make the data in a structed manner like, How much time particular user used this tools and how much bill the company should charge them, and other.
+
+Here we used tools like, Python, Pyspark, jira, bitbucket, Mysql.
+
+Roles and responsibilties:
+=========================
+> We are in to Analysis, design and implementation of business requirements using PySpark & Python	
+> Involved in writing Spark SQL scripts for data processing as per business requirements
+> We folled agile and scurm methodologies, and implemented 2 weekly sprints.
+
+
+Day to Day activities
+=====================
+we followed 2 week sprint here to track the the progress
+
+1. Standup call will be at 10.30 
+2. Scrum master will be there to get requirements from client and assign us with tickets.
+
+3.We get the data contuniously and we have implemented so many pipelines and we just process the data as per the requirements.
+

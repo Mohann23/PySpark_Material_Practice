@@ -1,0 +1,11 @@
+1. What is Spark?
+2. Transformations and actions ?
+3. Why spark is called as lazy, during the exection.?
+4. Is it good or bad that transformations are being lazy?
+5. Spark Architechture related questions?
+6. What kind of cluster managers you used in your earlier projects?
+7. code for reading a file using pyspark?
+8. code for write a file using pyspark?
+9. How to add column to the table using pyspark?
+10.Repartition and Coalesce?
+11.did you work with RDD or DF?

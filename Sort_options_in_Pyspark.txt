@@ -1,0 +1,84 @@
+https://www.programiz.com/dsa/sorting-algorithm
+
+Sorting:
+-------
+>>>>>Bubble Sort Algorithm:
+-----------------------
+Bubble sort is a sorting algorithm that compares two adjacent elements and swaps them until they are not in the intended order.
+
+Working of Bubble Sort
+Suppose we are trying to sort the elements in ascending order.
+
+First Iteration (Compare and Swap)
+
+1.Starting from the first index, compare the first and the second elements.
+If the first element is greater than the second element, they are swapped.
+2.Now, compare the second and the third elements. Swap them if they are not in order.
+The above process goes on until the last element.
+3.Compare two adjacent elements and swap them if the first element is greater than the next element
+
+
+>>>>>Selection Sort Algorithm:
+--------------------------
+Selection sort is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list.
+
+Working of Selection Sort
+
+>Set the first element as minimum.
+Selection Sort Steps
+Select first element as minimum
+1.Compare minimum with the second element. If the second element is smaller than minimum, assign the second element as minimum.
+
+2.Compare minimum with the third element. Again, if the third element is smaller, then assign minimum to the third element otherwise do nothing. The process goes on until the last element.
+
+3.Compare minimum with the remaining elements
+After each iteration, minimum is placed in the front of the unsorted list.
+
+4.Swap the first with minimum
+For each iteration, indexing starts from the first unsorted element. Step 1 to 3 are repeated until all the elements are placed at their correct positions.
+
+
+>>>>>Insertion Sort Algorithm:(key)
+------------------------
+Insertion sort is a sorting algorithm that places an unsorted element at its suitable place in each iteration.
+
+Insertion sort works similarly as we sort cards in our hand in a card game.
+
+We assume that the first card is already sorted then, we select an unsorted card. If the unsorted card is greater than the card in hand, it is placed on the right otherwise, to the left. In the same way, other unsorted cards are taken and put in their right place.
+
+A similar approach is used by insertion sort.
+
+Suppose we need to sort the following array.
+-----
+1.The first element in the array is assumed to be sorted. Take the second element and store it separately in key.
+
+  Compare key with the first element. If the first element is greater than key, then key is placed in front of the first element.
+  
+2.Now, the first two elements are sorted.
+
+  Take the third element and compare it with the elements on the left of it. Placed it just behind the element smaller than it. If there is no element smaller than it, then place it at the beginning of the array.
+  
+3.Similarly, place every unsorted element at its correct position.
+
+>>>>>Merge Sort Algorithm:(Divide and Conquer (Combine))
+	 --------------------
+Merge Sort is one of the most popular sorting algorithms that is based on the principle of Divide and Conquer Algorithm.
+
+Here, a problem is divided into multiple sub-problems. Each sub-problem is solved individually. Finally, sub-problems are combined to form the final solution.
+
+Divide and Conquer:(Divide and Conquer (Combine))
+---------------
+Using the Divide and Conquer technique, we divide a problem into subproblems. When the solution to each subproblem is ready, we 'combine' the results from the subproblems to solve the main problem.
+
+>>>>>Quicksort Algorithm:
+	 -------------------
+1.An array is divided into subarrays by selecting a pivot element (element selected from the array).
+
+While dividing the array, the pivot element should be positioned in such a way that elements less than pivot are kept on the left side and elements greater than pivot are on the right side of the pivot.
+2.The left and right subarrays are also divided using the same approach. This process continues until each subarray contains a single element.
+3.At this point, elements are already sorted. Finally, elements are combined to form a sorted array.
+
+
+
+
+

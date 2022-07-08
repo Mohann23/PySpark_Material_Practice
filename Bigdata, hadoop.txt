@@ -1,0 +1,27 @@
+Hadoop:
+------
+Open source frame work for storing and processing the big data, we can use java, python.
+
+Bigdata:
+-------
+Huge volume of data which are generated in very high speed, and volume is very high, we could not process this bigdata with normal techniques, so we are using Hadoop, which has GFS(google file system), MapReduces , HDFS.
+types of data:
+-------------
+	Structured -  RDBMS -- rows and columns.
+	Unstructrued - Images.
+	semi-structured - XML, json.
+	
+Sources of big data:
+-------------------
+	social media
+	stock exchanges
+	powergrid data
+	transport data
+	search engine data
+
+
+
+
+
+
+	
